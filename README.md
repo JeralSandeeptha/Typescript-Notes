@@ -8,6 +8,7 @@
 - [Types](#types)
 - [Primitive Types](#primitive-types)
 - [Functions](#functions)
+- [Objects](#Objects)
 
 ---
 
@@ -130,3 +131,22 @@ const consoleError = (error: string): never => {
     throw new Error(error);
 }
 ```
+
+---
+
+## Objects
+
+With parameters
+```js
+const createCourse = ({ name, price }: { name: string, price: number}) => {
+    console.log({name, price});
+}
+```
+
+with return type
+```js
+const createCourse = ({ name, price }: { name: string, price: number}): { name: string, price: number} => {
+    return {name, price};
+}
+```
+
